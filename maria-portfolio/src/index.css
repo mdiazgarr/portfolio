@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-beauty-pink: #FFD1DC;
+  --color-gold-accent: #D4AF37;
+  --color-lily-blue: #E0EFFF;
+}
