@@ -4,13 +4,49 @@ import { Heart, Languages, X, Github, Flower2, ChevronRight, Mail, Linkedin, Glo
 
 const content = {
   en: {
-    nav: { intro: "Intro", about: "About", projects: "Projects", skills: "Skills", contact: "Contact" },
+    nav: { intro: "Intro", about: "About", experience: "Experience", projects: "Projects", skills: "Skills", contact: "Contact" },
     portfolio: "2026 Portfolio",
     tagline: "Transforming data into beauty & retail strategies",
     getKnowMe: "Get to know me",
-    bio1: "Born in Barcelona and raised academically in Boston, I am driven by the conviction that data analytics is the secret ingredient behind the world’s most successful luxury brands.",
+    bio1: "Born in Barcelona and raised academically in Boston, I am driven by the conviction that data analytics is the secret ingredient behind the world's most successful luxury brands.",
     bio2: "My goal is to build a career at the intersection of Tech and Beauty, ensuring that innovation and consumer planning work hand in hand to create seamless brand experiences.",
-    quote: "Data tells a story; my job is to make that story beautiful and actionable.",
+    quote: "Behind every great brand, there is data that explains it all, my job is to find it and turn it into strategy",
+    experience: "Experience",
+    experiences: [
+      {
+        role: "Computer Assistant / Programmer",
+        company: "Questrom Tech Services Lab",
+        period: "Dec 2025 – May 2026",
+        location: "Boston, MA",
+        bullets: [
+          "Provided advanced technical support to 300+ faculty and students, managing incidents across software systems, booking platforms, and virtual lab environments to maintain operational continuity.",
+          "Developed and maintained Python scripts and automation tools to streamline internal workflows and support database management, reducing manual administrative work.",
+          "Automated operational reporting workflows using SQL and pandas, producing usage reports that improved planning and resource allocation across lab facilities."
+        ]
+      },
+      {
+        role: "Database & Analytics Engineer",
+        company: "Self-Serve",
+        period: "May 2025 – May 2026",
+        location: "Cambridge, MA",
+        bullets: [
+          "Developed predictive models for demand forecasting and dynamic pricing, enabling data-driven revenue decisions that improved commercial performance for hotel partners.",
+          "Built QA checks and validation scripts to ensure data accuracy and consistency across reporting outputs, reducing errors and improving reliability for business stakeholders.",
+          "Partnered with product and operations teams to translate technical findings into actionable recommendations on pricing, promotions, and performance incentives."
+        ]
+      },
+      {
+        role: "Analytical Strategist",
+        company: "MARE",
+        period: "Sep 2025 – Nov 2025",
+        location: "Boston, MA",
+        bullets: [
+          "Engineered a full-funnel measurement framework tracking reach, activation, and conversion KPIs, delivering weekly performance insights for stakeholder decision-making.",
+          "Designed and analyzed end-to-end A/B tests using statistical significance and sample size modeling to deliver data-backed budget and channel optimization recommendations.",
+          "Synthesized complex technical findings into executive-ready summaries, aligning creative and media stakeholders around unified performance targets and strategic goals."
+        ]
+      }
+    ],
     projects: "Selected Projects",
     skills: "My Skills",
     contact: "Get in touch!",
@@ -90,13 +126,49 @@ const content = {
     }
   },
   es: {
-    nav: { intro: "Inicio", about: "Sobre mí", projects: "Proyectos", skills: "Habilidades", contact: "Contacto" },
+    nav: { intro: "Inicio", about: "Sobre mí", experience: "Experiencia", projects: "Proyectos", skills: "Habilidades", contact: "Contacto" },
     portfolio: "Portfolio 2026",
     tagline: "Transformando datos en estrategias para el sector Beauty & Retail",
     getKnowMe: "Sobre mí",
     bio1: "Nacida en Barcelona y formada académicamente en Boston, soy una estudiante de Ingeniería Informática impulsada por la convicción de que el análisis de datos es el ingrediente secreto detrás de las marcas de lujo más exitosas del mundo.",
     bio2: "Mi objetivo es construir una carrera en la intersección entre la tecnología y la belleza, asegurando que la innovación y la planificación comercial trabajen de la mano para crear experiencias de marca impecables.",
-    quote: "Los datos cuentan una historia; mi objetivo es hacer que esa historia sea bella y accionable.",
+    quote: "Detrás de cada gran marca hay datos que lo explican todo, mi objetivo es encontrarlos y convertirlos en estrategia.",
+    experience: "Experiencia",
+    experiences: [
+      {
+        role: "Programadora y Asistente Técnica",
+        company: "Questrom Tech Services Lab",
+        period: "Dic 2025 – May 2026",
+        location: "Boston, MA",
+        bullets: [
+          "Soporte técnico avanzado a más de 300 personas, gestionando incidencias en sistemas de software, plataformas de reservas y entornos de laboratorio virtual para mantener la continuidad operativa.",
+          "Desarrollo y mantenimiento de scripts Python y herramientas de automatización para optimizar flujos internos y gestión de bases de datos, reduciendo el trabajo administrativo manual.",
+          "Automatización de reportes operativos con SQL y pandas, generando informes de uso que mejoraron la planificación y asignación de recursos en las instalaciones del laboratorio."
+        ]
+      },
+      {
+        role: "Ingeniera de Datos y Analítica",
+        company: "Self-Serve",
+        period: "May 2025 – May 2026",
+        location: "Cambridge, MA",
+        bullets: [
+          "Desarrollé modelos predictivos de previsión de demanda y precios dinámicos, permitiendo decisiones de ingresos basadas en datos que mejoraron el rendimiento comercial de socios hoteleros.",
+          "Construí scripts de validación y control de calidad para garantizar la precisión y consistencia de los datos en los informes, reduciendo errores para los stakeholders.",
+          "Colaboré con equipos de producto y operaciones para traducir hallazgos técnicos en recomendaciones accionables sobre precios, promociones e incentivos de rendimiento."
+        ]
+      },
+      {
+        role: "Estratega Analítica",
+        company: "MARE",
+        period: "Sep 2025 – Nov 2025",
+        location: "Boston, MA",
+        bullets: [
+          "Diseñé un framework de medición full-funnel (alcance, activación, conversión), rastreando KPIs de rendimiento y entregando insights semanales para la toma de decisiones.",
+          "Diseñé y analicé A/B tests de extremo a extremo con significancia estadística y modelado de tamaño de muestra para optimizar presupuesto y canales con respaldo de datos.",
+          "Sinteticé hallazgos técnicos complejos en resúmenes ejecutivos, alineando a stakeholders creativos y de medios en torno a objetivos de rendimiento y metas estratégicas compartidas."
+        ]
+      }
+    ],
     projects: "Proyectos Seleccionados",
     skills: "Mis Habilidades",
     contact: "¡Ponte en contacto!",
@@ -245,10 +317,11 @@ function App() {
       <nav className="fixed top-0 left-0 w-full z-50 p-6 flex justify-between items-center bg-[#F9F6F0]/60 backdrop-blur-lg border-b border-[#D4AF37]/10">
         <span className="font-serif italic text-lg tracking-tighter">María Díaz Garrido</span>
         
-        {/* BOTÓN TRADUCTOR ESTILO TOGGLE */}
         <div className="flex items-center gap-6">
-<div className="hidden md:flex items-center gap-8 text-xs tracking-[0.2em] font-medium mr-4">            <a href="#intro" className="hover:text-gold-accent transition-colors">{t.nav.intro}</a>
+          <div className="hidden md:flex items-center gap-8 text-xs tracking-[0.2em] font-medium mr-4">
+            <a href="#intro" className="hover:text-gold-accent transition-colors">{t.nav.intro}</a>
             <a href="#about" className="hover:text-gold-accent transition-colors">{t.nav.about}</a>
+            <a href="#experience" className="hover:text-gold-accent transition-colors">{t.nav.experience}</a>
             <a href="#projects" className="hover:text-gold-accent transition-colors">{t.nav.projects}</a>
             <a href="#skills" className="hover:text-gold-accent transition-colors">{t.nav.skills}</a>
             <a href="#contact" className="hover:text-gold-accent transition-colors">{t.nav.contact}</a>
@@ -274,8 +347,8 @@ function App() {
       {/* 1. INTRO */}
       <section id="intro" className="h-screen flex flex-col items-center justify-center text-center px-4 relative">
         <motion.div key={lang} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
-          <p className=" tracking-[0.5em] text-[10px] mb-8 text-[#A89276]">{t.portfolio}</p>
-          <h1 className="font-serif text-6xl md:text-[110px] leading-none mb-6 ">María <br/><span className="italic font-light text-[#A89276] capitalize">Díaz Garrido</span></h1>
+          <p className="tracking-[0.5em] text-[10px] mb-8 text-[#A89276]">{t.portfolio}</p>
+          <h1 className="font-serif text-6xl md:text-[110px] leading-none mb-6">María <br/><span className="italic font-light text-[#A89276] capitalize">Díaz Garrido</span></h1>
           <div className="h-[1px] w-24 bg-[#D4AF37] mx-auto my-8" />
           <p className="font-serif italic text-xl text-[#D4AF37] max-w-lg mx-auto">{t.tagline}</p>
         </motion.div>
@@ -284,7 +357,6 @@ function App() {
       {/* 2. ABOUT */}
       <section id="about" className="py-32 px-6 md:px-20 bg-white/50 border-y border-[#EEEAE3]">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-          {/* PHOTO CONTAINER */}
           <div className="aspect-[4/5] bg-[#E6E6FA] rounded-t-full border-[12px] border-white shadow-2xl relative flex items-center justify-center overflow-hidden">
             <img 
               src="/mi-foto.jpeg" 
@@ -293,29 +365,64 @@ function App() {
             />
           </div>
           <div className="text-left">
-            <h2 className="font-serif text-6xl mb-10 ">{t.getKnowMe}</h2>
+            <h2 className="font-serif text-6xl mb-10">{t.getKnowMe}</h2>
             <div className="space-y-8 font-sans text-gray-600 leading-relaxed text-xl text-balance">
               <p>{t.bio1}</p>
               <p>{t.bio2}</p>
-              <p className="font-serif italic text-3xl text-black border-l-4 border-beauty-pink pl-8 italic">"{t.quote}"</p>
+              <p className="font-serif italic text-3xl text-black border-l-4 border-[#D4AF37] pl-8">"{t.quote}"</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. PROJECTS (Carpetas sin estrellas) */}
-      <section id="projects" className="py-32 px-10">
+      {/* 3. EXPERIENCE */}
+      <section id="experience" className="py-32 px-6 md:px-20">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-serif text-5xl italic text-center mb-24">{t.experience}</h2>
+          <div className="relative border-l-2 border-[#D4AF37]/30 ml-4 md:ml-8 space-y-16">
+            {t.experiences.map((exp, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="pl-10 md:pl-16 relative"
+              >
+                <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-[#D4AF37]" />
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 gap-1">
+                  <div>
+                    <h3 className="font-serif text-2xl">{exp.role}</h3>
+                    <p className="text-[#D4AF37] text-sm tracking-widest font-bold mt-1">{exp.company} • {exp.location}</p>
+                  </div>
+                  <span className="text-[10px] tracking-[0.2em] text-[#A89276] font-medium whitespace-nowrap">{exp.period}</span>
+                </div>
+                <ul className="space-y-2 mt-4">
+                  {exp.bullets.map((b, j) => (
+                    <li key={j} className="flex items-start gap-2 text-gray-500 text-sm leading-relaxed">
+                      <ChevronRight size={12} className="text-[#D4AF37] mt-1 shrink-0" />
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. PROJECTS */}
+      <section id="projects" className="py-32 px-10 bg-white/50 border-y border-[#EEEAE3]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-serif text-5xl italic text-center mb-24 ">{t.projects}</h2>
+          <h2 className="font-serif text-5xl italic text-center mb-24">{t.projects}</h2>
           <div className="flex flex-wrap justify-center gap-16">
             {projects.map((proj, i) => (
               <motion.div key={i} onClick={() => setSelectedProject(proj.data)} whileHover={{ y: -10 }} className="flex flex-col items-center cursor-pointer group w-48 text-center">
-                {/* Carpeta Limpia */}
                 <div className={`relative w-40 h-28 ${proj.color} rounded-tr-3xl rounded-bl-3xl shadow-sm group-hover:shadow-xl transition-all flex items-center justify-center`}>
                   <div className={`absolute -top-3 left-0 w-16 h-6 ${proj.color.split(' ')[0]} rounded-t-lg opacity-80`}/>
                 </div>
-                <h3 className="mt-8 font-serif text-xl leading-tight ">{proj.data.title}</h3>
-                <p className="text-[10px]  tracking-widest text-[#A89276] mt-2 flex items-center justify-center gap-1">
+                <h3 className="mt-8 font-serif text-xl leading-tight">{proj.data.title}</h3>
+                <p className="text-[10px] tracking-widest text-[#A89276] mt-2 flex items-center justify-center gap-1">
                   {proj.data.subtitle} <ChevronRight size={10} />
                 </p>
               </motion.div>
@@ -324,70 +431,61 @@ function App() {
         </div>
       </section>
 
-      {/* 4. SKILLS */}
-      <section id="skills" className="py-32 px-6 md:px-20 bg-white/50 border-y border-[#EEEAE3]">
+      {/* 5. SKILLS */}
+      <section id="skills" className="py-32 px-6 md:px-20 border-y border-[#EEEAE3]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-5xl italic text-center mb-24 ">{t.skills}</h2>
-          
-          {/* He añadido 'md:pl-16' para mover los tres bloques a la derecha en pantallas grandes */}
+          <h2 className="font-serif text-5xl italic text-center mb-24">{t.skills}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-left md:pl-16">
-            
-            {/* Data Skills */}
             <div className="space-y-8">
               <div className="flex items-center gap-4 text-[#D4AF37]">
                 <BarChart3 size={32} />
-                <h3 className="font-serif text-2xl ">{t.skillCats.data}</h3>
+                <h3 className="font-serif text-2xl">{t.skillCats.data}</h3>
               </div>
-              <ul className="space-y-4 font-sans text-sm  tracking-widest text-gray-500">
-                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-beauty-pink" /> Python (Pandas, NumPy)</li>
-                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-beauty-pink" /> Machine Learning (XGBoost, Sklearn)</li>
-                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-beauty-pink" /> SQL (PostgreSQL, SQLite)</li>
-                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-beauty-pink" /> Statistical Modeling & A/B Testing</li>
+              <ul className="space-y-4 font-sans text-sm tracking-widest text-gray-500">
+                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-[#D4AF37]" /> Python (Pandas, NumPy)</li>
+                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-[#D4AF37]" /> Machine Learning (XGBoost, Sklearn)</li>
+                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-[#D4AF37]" /> SQL (PostgreSQL, SQLite)</li>
+                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-[#D4AF37]" /> Statistical Modeling & A/B Testing</li>
               </ul>
             </div>
-
-            {/* Tech Skills */}
             <div className="space-y-8">
               <div className="flex items-center gap-4 text-[#D4AF37]">
                 <Code2 size={32} />
-                <h3 className="font-serif text-2xl ">{t.skillCats.tech}</h3>
+                <h3 className="font-serif text-2xl">{t.skillCats.tech}</h3>
               </div>
-              <ul className="space-y-4 font-sans text-sm  tracking-widest text-gray-500">
-                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-beauty-pink" /> React.js & JavaScript (ES6+)</li>
-                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-beauty-pink" /> Django (Python Framework)</li>
-                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-beauty-pink" /> Git / GitHub & Linux</li>
-                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-beauty-pink" /> ETL Pipelines & Automation</li>
+              <ul className="space-y-4 font-sans text-sm tracking-widest text-gray-500">
+                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-[#D4AF37]" /> React.js & JavaScript (ES6+)</li>
+                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-[#D4AF37]" /> Django (Python Framework)</li>
+                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-[#D4AF37]" /> Git / GitHub & Linux</li>
+                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-[#D4AF37]" /> ETL Pipelines & Automation</li>
               </ul>
             </div>
-
-            {/* Languages */}
             <div className="space-y-8">
               <div className="flex items-center gap-4 text-[#D4AF37]">
                 <Languages size={32} />
-                <h3 className="font-serif text-2xl ">{t.skillCats.languages}</h3>
+                <h3 className="font-serif text-2xl">{t.skillCats.languages}</h3>
               </div>
-              <ul className="space-y-4 font-sans text-sm  tracking-widest text-gray-500">
-                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-beauty-pink" /> Spanish (Native)</li>
-                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-beauty-pink" /> English (Fluent / C1)</li>
-                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-beauty-pink" /> French (Intermediate / B1)</li>
+              <ul className="space-y-4 font-sans text-sm tracking-widest text-gray-500">
+                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-[#D4AF37]" /> Spanish (Native)</li>
+                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-[#D4AF37]" /> English (Fluent / C1)</li>
+                <li className="flex items-center gap-2"><ChevronRight size={12} className="text-[#D4AF37]" /> French (Intermediate / B1)</li>
               </ul>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* 5. CONTACT */}
+      {/* 6. CONTACT */}
       <section id="contact" className="py-40 px-6 text-center">
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-          <p className=" tracking-[0.5em] text-[10px] mb-8 text-[#A89276]">Contact</p>
-          <h2 className="font-serif text-7xl md:text-9xl mb-20 ">{t.contact}</h2>
+          <p className="tracking-[0.5em] text-[10px] mb-8 text-[#A89276]">Contact</p>
+          <h2 className="font-serif text-7xl md:text-9xl mb-20">{t.contact}</h2>
           <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24">
             <a href="mailto:diazgarmaria@gmail.com" className="group flex flex-col items-center gap-4">
               <div className="w-20 h-20 rounded-full border border-[#D4AF37] flex items-center justify-center group-hover:bg-gold-accent group-hover:text-white transition-all">
                 <Mail size={32} />
               </div>
-              <span className="font-sans text-[10px]  tracking-widest font-bold">Email</span>
+              <span className="font-sans text-[10px] tracking-widest font-bold">Email</span>
             </a>
             <a href="https://github.com/mdiazgarr" target="_blank" rel="noreferrer" className="group flex flex-col items-center gap-4">
               <div className="w-20 h-20 rounded-full border border-[#D4AF37] flex items-center justify-center group-hover:bg-gold-accent group-hover:text-white transition-all">
